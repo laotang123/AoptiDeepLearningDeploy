@@ -94,11 +94,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\VSProjects\2017\AoptiDeepLearningDeploy\AoptiClassification\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\VSProjects\2017\AoptiDeepLearningDeploy\AoptiClassification\include;D:\VSProjects\OpenCV3.4.1\build\include\opencv2;D:\VSProjects\OpenCV3.4.1\build\include\opencv;D:\VSProjects\OpenCV3.4.1\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>D:\VSProjects\2017\AoptiDeepLearningDeploy\AoptiClassification\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\VSProjects\OpenCV3.4.1\build\x64\vc15\lib;D:\VSProjects\2017\AoptiDeepLearningDeploy\AoptiClassification\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>tvm_runtime.lib;opencv_world341.lib;opencv_world341d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -124,13 +126,15 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\VSProjects\2017\AoptiDeepLearningDeploy\AoptiClassification\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\VSProjects\2017\AoptiDeepLearningDeploy\AoptiClassification\include;D:\VSProjects\OpenCV3.4.1\build\include\opencv2;D:\VSProjects\OpenCV3.4.1\build\include\opencv;D:\VSProjects\OpenCV3.4.1\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>D:\VSProjects\2017\AoptiDeepLearningDeploy\AoptiClassification\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\VSProjects\OpenCV3.4.1\build\x64\vc15\lib;D:\VSProjects\2017\AoptiDeepLearningDeploy\AoptiClassification\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>tvm_runtime.lib;opencv_world341.lib;opencv_world341d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
