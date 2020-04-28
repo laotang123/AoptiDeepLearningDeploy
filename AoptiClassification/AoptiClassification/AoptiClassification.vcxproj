@@ -30,6 +30,7 @@
     <ProjectGuid>{8CB8F3D6-7A40-43CB-8347-52011BC82AFA}</ProjectGuid>
     <RootNamespace>AoptiClassification</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>AoptiClassification</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

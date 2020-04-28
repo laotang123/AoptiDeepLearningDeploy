@@ -9,6 +9,8 @@
 #include <tvm/runtime/registry.h>
 #include <tvm/runtime/packed_func.h>
 
+#include "aoptiClassification.h"
+
 #include <algorithm>
 #include <fstream>
 #include <ctime>
@@ -160,9 +162,28 @@ void TvmInference(std::string data_path, std::string model_name) {
 }
 
 int main() {
-	std::string data_path = "D:/VSProjects/data";
-	std::string model_name = "squeezenet1-1-9791llvm -mcpu=core-avx2";
-	//std::string data_path = "./data";
-	TvmInference(data_path, model_name);
+	//std::string data_path = "D:/VSProjects/data";
+	//std::string model_name = "squeezenet1-1-9791llvm -mcpu=core-avx2";
+	/*std::string data_path = "./data";
+	TvmInference(data_path, model_name);*/
+
+	//TODO: ×Ö·û´®
+
+	std::string pretrainedModelPath = "D:/VSProjects/data/lib";
+	std::string pretrainedModelName = "squeezenet1-1-9791llvm -mcpu=core-avx2";
+	AoptiClassification model;
+	model.InitClassification(pretrainedModelPath, pretrainedModelName,7);
+
+
+	//¼ÓÔØÍ¼Æ¬½øÐÐÔ¤²â
+	std::string img_path = "D:/GitProjects/UsuallyUse/data/l2l-train-240X7-1118/train/ddust/ddust0.tif";
+	cv::Mat img = cv::imread(img_path, 0);
+
+	int result = model.Classification(img.data, img.rows, img.cols);
+
+	//std::string str_tmp = 
+
+	std::cout << "Ô¤²â½á¹û£º" << result << std::endl;
+
 	return 0;
 }
